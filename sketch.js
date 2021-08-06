@@ -3,17 +3,17 @@ var database;
 var height;
 
 function preload(){
-   bg =loadImage("back.png");
-   balloonImage1=loadAnimation("2.png");
-   balloonImage2=loadAnimation("2.png","2.png",
-   "2.png","3.png","3.png","3.png","4.png","4.png","4.png");
+   bg =loadImage("Images/cityImage.png");
+   balloonImage1=loadAnimation("Images/HotAirBallon-01.png");
+   balloonImage2=loadAnimation("Images/HotAirBallon-01.png","Images/HotAirBallon-01.png",
+   "Images/HotAirBallon-01.png","Images/HotAirBallon-02.png","Images/HotAirBallon-02.png",
+   "Images/HotAirBallon-02.png","Images/HotAirBallon-03.png","Images/HotAirBallon-03.png","Images/HotAirBallon-03.png");
   }
 
 //Function to set initial environment
 function setup() {
-
-  createCanvas(1500,700);
   database=firebase.database();
+  createCanvas(1500,700);
 
   balloon=createSprite(250,650,150,150);
   balloon.addAnimation("hotAirBalloon",balloonImage1);
